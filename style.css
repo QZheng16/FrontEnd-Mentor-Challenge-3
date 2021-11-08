@@ -1,9 +1,20 @@
 
 html body{
     min-height: 100vh;
-    min-width: 100vw;
-    height: 100vh;
-    width: 100vw;
+    background-color: var(--color-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sr-only {
+    position: absolute;
+    top: auto;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
 }
 
 :root{
@@ -15,9 +26,8 @@ html body{
 }
 
 .bg{
-    background-color: var(--color-light-gray);
-    height: 130%;
-    width: 100%;
+
+    padding: 3rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,17 +36,18 @@ html body{
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 90%;
-    height: 90%;
+    justify-content: flex-start;
+    width: 20rem;
+    height: 60rem;
     border-radius: .5rem;
     overflow: hidden;    
 }
 
-.card h1{
+.card h2{
     font-family: 'Big Shoulders Display';
     font-weight: 700;
     color: var(--color-light-gray);
+    text-transform: uppercase;
 }
 
 .card p{
@@ -55,15 +66,19 @@ html body{
     width: 3rem;
 }
 
-button{
+a{
+    display: block; 
     background-color: var(--color-light-gray);
     font-family: 'Lexend Deca';
     font-weight: 400;
     font-size: .7rem;
     border-style: none;
-    border-radius: 10rem;
-    width: 7rem;
-    height: 2rem;
+    border-radius: 2rem;
+    width: 6rem;
+    height: .6rem;
+    padding: 1rem;
+    text-align: center;
+    
 }
 
 
@@ -73,7 +88,7 @@ button{
         
 }
 
-.sedan button{
+.sedan a{
     color: var(--color-bright-orange);
 }
 
@@ -83,7 +98,7 @@ button{
     background-color: var(--color-dark-cyan);
 }
 
-.suv button{
+.suv a{
     color: var(--color-dark-cyan);
 }
 
@@ -92,11 +107,11 @@ button{
     background-color: var(--color-very-dark-cyan);
 }
 
-.luxury button{
+.luxury a{
     color: var(--color-very-dark-cyan);
 }
 
-button:hover{
+a:hover{
     background-color: transparent;
     color: var(--color-light-gray);
     outline-style:solid;
@@ -105,12 +120,10 @@ button:hover{
 
 @media (min-width: 735px){
     body{
-        background-color: var(--color-light-gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .bg{
-        height:100%;  
-
-    }   
     .card{
         flex-direction: row;
         min-width: 700px;
@@ -131,9 +144,9 @@ button:hover{
         padding: 2rem 5% 2rem;
      }
 
-     button{
-         margin-top: 4rem;
-         width: 8rem;
-         height: 3rem;
+     a{
+         margin-top: 2rem;
+         width: 6rem;
+         height: 1rem;
      }
 }
