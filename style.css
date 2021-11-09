@@ -36,11 +36,12 @@ html body{
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     width: 20rem;
     height: 60rem;
     border-radius: .5rem;
-    overflow: hidden;    
+    overflow: hidden;
+       
 }
 
 .card h2{
@@ -56,6 +57,7 @@ html body{
     color: var(--color-trans-white);
     font-size: .7rem;
     line-height:1.3rem;
+
 }
 
 .card > div{
